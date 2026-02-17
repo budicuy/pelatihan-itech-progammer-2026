@@ -25,7 +25,7 @@ export default function Philosophy() {
             Filosofi Vibe Coding
           </h3>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Pelatian ini tidak hanya mengajarkan cara menulis kode, tapi
+            Pelatihan ini tidak hanya mengajarkan cara menulis kode, tapi
             bagaimana cara{" "}
             <span className="text-white font-semibold">
               menciptakan masa depan
