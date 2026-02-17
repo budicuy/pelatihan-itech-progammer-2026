@@ -6,24 +6,28 @@ export default function Footer() {
   return (
     <footer className="bg-black py-10 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-        <div className="flex items-center gap-2">
+        <div className="flex items-start gap-4">
           <Image
             src="/logo-itech.svg"
             alt="Itech Poliban Logo"
-            width={40}
-            height={40}
-            className="object-contain"
+            width={44}
+            height={44}
+            className="object-contain shrink-0 mt-1"
           />
-          <span className="text-white font-bold font-display">
+          <div className="flex flex-col">
             <div className="flex items-center gap-2">
-              <span>ITECH</span>
-              <span className="text-accent">POLIBAN</span>
+              <span className="text-white font-bold font-display text-xl tracking-tight">
+                ITECH
+              </span>
+              <span className="text-accent font-bold font-display text-xl tracking-tight">
+                POLIBAN
+              </span>
             </div>
-            <span className="text-gray-400 text-sm mt-2">
+            <p className="text-gray-400 text-sm leading-relaxed max-w-xs md:max-w-sm mt-1">
               Pelatihan Programmer yang berfokus pada pengembangan web dan
               mobile dengan menggunakan teknologi terbaru.
-            </span>
-          </span>
+            </p>
+          </div>
         </div>
 
         <div className="text-gray-500 text-sm text-center md:text-right">

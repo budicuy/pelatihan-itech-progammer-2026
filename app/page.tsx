@@ -1,6 +1,7 @@
 import Benefits from "@/components/sections/Benefits";
 import CTA from "@/components/sections/CTA";
 import Curriculum from "@/components/sections/Curriculum";
+import FloatingCTA from "@/components/sections/FloatingCTA";
 import Footer from "@/components/sections/Footer";
 import Hero from "@/components/sections/Hero";
 import Navbar from "@/components/sections/Navbar";
@@ -19,6 +20,7 @@ export default function Home() {
       <Timeline />
       <Benefits />
       <CTA />
+      <FloatingCTA />
       <Footer />
     </div>
   );
