@@ -4,7 +4,7 @@ import { MdArrowDownward, MdArrowForward } from "react-icons/md";
 import { useRegistration } from "@/components/providers/RegistrationProvider";
 
 export default function Hero() {
-  const { openModal } = useRegistration();
+  const { openModal, isRegistrationOpen, isLoadingStatus } = useRegistration();
 
   return (
     <section
@@ -26,6 +26,10 @@ export default function Hero() {
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-display tracking-tight leading-tight mb-6">
           Pelatihan Divisi Programmer <br />
           <span className="text-gradient">Komunitas Itech Poliban 2026</span>
+          <br />
+          <span className="text-2xl font-bold bg-linear-to-r from-primary to-accent md:text-4xl lg:text-5xl px-5 py-2">
+            (Coming Soon!)
+          </span>
         </h1>
         <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
           Bagaimana Menyesuaikan Diri di Era AI Menggunakan Vibe Coding. Kuasai
@@ -36,10 +40,19 @@ export default function Hero() {
           <button
             type="button"
             onClick={openModal}
-            className="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-primary-dark text-white rounded-lg font-bold text-lg transition-all shadow-xl shadow-primary/25 flex items-center justify-center gap-2 group"
+            disabled={!isRegistrationOpen || isLoadingStatus}
+            className={`w-full sm:w-auto px-8 py-4 rounded-lg font-bold text-lg transition-all flex items-center justify-center gap-2 group ${
+              isRegistrationOpen
+                ? "bg-primary hover:bg-primary-dark text-white shadow-xl shadow-primary/25"
+                : "bg-gray-800 text-gray-500 cursor-not-allowed shadow-none"
+            } ${isLoadingStatus ? "opacity-0" : "opacity-100"}`}
           >
-            <span>Daftar Sekarang</span>
-            <MdArrowForward className="group-hover:translate-x-1 transition-transform text-2xl" />
+            <span>
+              {isRegistrationOpen ? "Daftar Sekarang" : "Pendaftaran Ditutup"}
+            </span>
+            {isRegistrationOpen && (
+              <MdArrowForward className="group-hover:translate-x-1 transition-transform text-2xl" />
+            )}
           </button>
           <a
             href="#vision"

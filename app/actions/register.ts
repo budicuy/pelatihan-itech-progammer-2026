@@ -12,6 +12,15 @@ export async function registerAction(formData: {
   quote: string;
 }) {
   try {
+    // 0. Cek apakah pendaftaran sedang dibuka
+    const isRegistrationOpen = process.env.REGISTRATION?.toUpperCase() === "TRUE";
+    if (!isRegistrationOpen) {
+      return {
+        success: false,
+        error: "Maaf, pendaftaran saat ini sedang ditutup.",
+      };
+    }
+
     // 1. Cek total kuota (Limit 30)
     const [registrationCount] = await db
       .select({ value: count() })

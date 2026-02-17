@@ -3,7 +3,7 @@
 import { useRegistration } from "@/components/providers/RegistrationProvider";
 
 export default function CTA() {
-  const { openModal } = useRegistration();
+  const { openModal, isRegistrationOpen, isLoadingStatus } = useRegistration();
 
   return (
     <section className="py-20 bg-background-dark border-t border-border-dark">
@@ -15,13 +15,22 @@ export default function CTA() {
           Kuota terbatas untuk menjaga kualitas pelatihan. Daftarkan dirimu
           sekarang sebelum terlambat.
         </p>
-        <button
-          type="button"
-          onClick={openModal}
-          className="px-10 py-4 bg-primary hover:bg-primary-dark text-white rounded-lg font-bold text-xl transition-all shadow-xl shadow-primary/30 w-full sm:w-auto"
-        >
-          Daftar Sekarang Gratis
-        </button>
+        {!isLoadingStatus && (
+          <button
+            type="button"
+            onClick={openModal}
+            disabled={!isRegistrationOpen}
+            className={`px-10 py-4 rounded-lg font-bold text-xl transition-all w-full sm:w-auto ${
+              isRegistrationOpen
+                ? "bg-primary hover:bg-primary-dark text-white shadow-xl shadow-primary/30"
+                : "bg-gray-800 text-gray-500 cursor-not-allowed shadow-none"
+            }`}
+          >
+            {isRegistrationOpen
+              ? "Daftar Sekarang Gratis"
+              : "Pendaftaran Ditutup"}
+          </button>
+        )}
       </div>
     </section>
   );

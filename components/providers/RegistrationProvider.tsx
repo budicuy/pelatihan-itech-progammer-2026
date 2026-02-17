@@ -1,11 +1,14 @@
 "use client";
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import RegistrationModal from "@/components/sections/RegistrationModal";
+import { getRegistrationStatus } from "@/app/actions/get-status";
 
 interface RegistrationContextType {
   openModal: () => void;
   closeModal: () => void;
+  isRegistrationOpen: boolean;
+  isLoadingStatus: boolean;
 }
 
 const RegistrationContext = createContext<RegistrationContextType | undefined>(
@@ -18,12 +21,23 @@ export function RegistrationProvider({
   children: React.ReactNode;
 }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [isRegistrationOpen, setIsRegistrationOpen] = useState(true);
+  const [isLoadingStatus, setIsLoadingStatus] = useState(true);
+
+  useEffect(() => {
+    getRegistrationStatus().then((status) => {
+      setIsRegistrationOpen(status);
+      setIsLoadingStatus(false);
+    });
+  }, []);
 
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
 
   return (
-    <RegistrationContext.Provider value={{ openModal, closeModal }}>
+    <RegistrationContext.Provider
+      value={{ openModal, closeModal, isRegistrationOpen, isLoadingStatus }}
+    >
       {children}
       <RegistrationModal isOpen={isOpen} onClose={closeModal} />
     </RegistrationContext.Provider>

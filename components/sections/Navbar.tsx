@@ -6,7 +6,7 @@ import { MdMenu } from "react-icons/md";
 import { useRegistration } from "@/components/providers/RegistrationProvider";
 
 export default function Navbar() {
-  const { openModal } = useRegistration();
+  const { openModal, isRegistrationOpen, isLoadingStatus } = useRegistration();
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-background-dark/80 backdrop-blur-md border-b border-border-dark">
@@ -57,13 +57,20 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <button
-            type="button"
-            onClick={openModal}
-            className="hidden md:flex bg-primary hover:bg-primary-dark text-white px-5 py-2 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20"
-          >
-            Daftar Sekarang
-          </button>
+          {!isLoadingStatus && (
+            <button
+              type="button"
+              onClick={openModal}
+              disabled={!isRegistrationOpen}
+              className={`hidden md:flex px-5 py-2 rounded-lg text-sm font-bold transition-all shadow-lg ${
+                isRegistrationOpen
+                  ? "bg-primary hover:bg-primary-dark text-white shadow-primary/20"
+                  : "bg-gray-800 text-gray-500 cursor-not-allowed shadow-none"
+              }`}
+            >
+              {isRegistrationOpen ? "Daftar Sekarang" : "Pendaftaran Ditutup"}
+            </button>
+          )}
 
           <div className="md:hidden text-white">
             <MdMenu className="text-2xl" />

@@ -4,7 +4,9 @@ import { MdAssignment } from "react-icons/md";
 import { useRegistration } from "@/components/providers/RegistrationProvider";
 
 export default function FloatingCTA() {
-  const { openModal } = useRegistration();
+  const { openModal, isRegistrationOpen, isLoadingStatus } = useRegistration();
+
+  if (isLoadingStatus || !isRegistrationOpen) return null;
 
   return (
     <button
