@@ -1,10 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { MdMenu } from "react-icons/md";
+import { useRegistration } from "@/components/providers/RegistrationProvider";
 
 export default function Navbar() {
+  const { openModal } = useRegistration();
+
   return (
-    <nav className="fixed top-0 w-full z-50 bg-[#141118]/80 backdrop-blur-md border-b border-border-dark">
+    <nav className="fixed top-0 w-full z-50 bg-background-dark/80 backdrop-blur-md border-b border-border-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <header className="flex items-center justify-between h-16">
           <div className="flex items-center gap-3">
@@ -22,41 +27,44 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-8">
             <Link
               className="text-gray-300 hover:text-accent text-sm font-medium transition-colors"
-              href="#home"
+              href="/#home"
             >
               Beranda
             </Link>
             <Link
               className="text-gray-300 hover:text-accent text-sm font-medium transition-colors"
-              href="#vision"
+              href="/#vision"
             >
               Visi
             </Link>
             <Link
               className="text-gray-300 hover:text-accent text-sm font-medium transition-colors"
-              href="#curriculum"
+              href="/#curriculum"
             >
               Materi
             </Link>
             <Link
               className="text-gray-300 hover:text-accent text-sm font-medium transition-colors"
-              href="#timeline"
+              href="/#timeline"
             >
               Jadwal
             </Link>
             <Link
               className="text-gray-300 hover:text-accent text-sm font-medium transition-colors"
-              href="#benefits"
+              href="/#benefits"
             >
               Benefit
             </Link>
           </div>
+
           <button
             type="button"
+            onClick={openModal}
             className="hidden md:flex bg-primary hover:bg-primary-dark text-white px-5 py-2 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20"
           >
             Daftar Sekarang
           </button>
+
           <div className="md:hidden text-white">
             <MdMenu className="text-2xl" />
           </div>

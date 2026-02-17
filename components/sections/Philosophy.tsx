@@ -117,7 +117,7 @@ export default function Philosophy() {
 
           <div className="lg:col-span-5 relative">
             <div className="rounded-3xl bg-linear-to-br from-primary via-purple-900 to-black p-1 shadow-2xl shadow-primary/20 overflow-hidden">
-              <div className="h-full w-full bg-[#1e1a24] rounded-[calc(1.5rem-1px)] overflow-hidden flex flex-col font-mono text-xs sm:text-sm border border-white/5">
+              <div className="h-full w-full bg-card-dark rounded-[calc(1.5rem-1px)] overflow-hidden flex flex-col font-mono text-xs sm:text-sm border border-white/5">
                 {/* Terminal Header */}
                 <div className="bg-[#2a2433] px-4 py-3 flex items-center justify-between border-b border-white/5">
                   <div className="flex gap-1.5">

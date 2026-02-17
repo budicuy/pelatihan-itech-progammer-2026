@@ -1,6 +1,11 @@
-import { MdArrowForward, MdPlayCircle } from "react-icons/md";
+"use client";
+
+import { MdArrowDownward, MdArrowForward } from "react-icons/md";
+import { useRegistration } from "@/components/providers/RegistrationProvider";
 
 export default function Hero() {
+  const { openModal } = useRegistration();
+
   return (
     <section
       className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden"
@@ -15,7 +20,7 @@ export default function Hero() {
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-border-dark/50 border border-primary/30 mb-6 backdrop-blur-sm">
           <span className="flex h-2 w-2 rounded-full bg-accent" />
           <span className="text-xs font-medium text-accent uppercase tracking-wider">
-            Speaker: Budiannor
+            Batch 1 : Vibe Coding AI - 2026
           </span>
         </div>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-display tracking-tight leading-tight mb-6">
@@ -30,18 +35,19 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
             type="button"
+            onClick={openModal}
             className="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-primary-dark text-white rounded-lg font-bold text-lg transition-all shadow-xl shadow-primary/25 flex items-center justify-center gap-2 group"
           >
             <span>Daftar Sekarang</span>
             <MdArrowForward className="group-hover:translate-x-1 transition-transform text-2xl" />
           </button>
-          <button
-            type="button"
-            className="w-full sm:w-auto px-8 py-4 bg-transparent border border-gray-600 hover:border-accent text-white hover:text-accent rounded-lg font-medium text-lg transition-all flex items-center justify-center gap-2"
+          <a
+            href="#vision"
+            className="w-full sm:w-auto px-8 py-4 bg-transparent border border-gray-600 hover:border-accent text-white hover:text-accent rounded-lg font-medium text-lg transition-all flex items-center justify-center gap-2 group/btn"
           >
-            <MdPlayCircle className="text-2xl" />
-            <span>Tonton Intro</span>
-          </button>
+            <MdArrowDownward className="text-2xl group-hover:translate-y-1 transition-transform" />
+            <span>Pelajari Selengkapnya</span>
+          </a>
         </div>
         {/* Stats/Tags */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-border-dark pt-8 max-w-4xl mx-auto">

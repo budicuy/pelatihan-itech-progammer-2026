@@ -1,4 +1,10 @@
+"use client";
+
+import { useRegistration } from "@/components/providers/RegistrationProvider";
+
 export default function CTA() {
+  const { openModal } = useRegistration();
+
   return (
     <section className="py-20 bg-background-dark border-t border-border-dark">
       <div className="max-w-4xl mx-auto px-4 text-center">
@@ -11,6 +17,7 @@ export default function CTA() {
         </p>
         <button
           type="button"
+          onClick={openModal}
           className="px-10 py-4 bg-primary hover:bg-primary-dark text-white rounded-lg font-bold text-xl transition-all shadow-xl shadow-primary/30 w-full sm:w-auto"
         >
           Daftar Sekarang Gratis

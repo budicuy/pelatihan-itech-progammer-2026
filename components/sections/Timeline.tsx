@@ -36,8 +36,8 @@ export default function Timeline() {
       description:
         "Uji coba studi kasus nyata, review akhir, dan dokumentasi portofolio.",
       meetings: [
-        "Pertemuan 9 : Tes Implementasikan Studi Kasus 1 Web E-Commerce dan Studi Kasus Poliklinik",
-        "Pertemuan 10 : Tes Implementasikan Studi Kasus 2 Web E-Commerce dan Studi Kasus Poliklinik",
+        "Pertemuan 9 : Tes Implementasikan Studi Kasus 1 Web E-Commerce Atau Studi Kasus Poliklinik",
+        "Pertemuan 10 : Tes Implementasikan Studi Kasus 2 Web E-Commerce Atau Studi Kasus Poliklinik",
         "Pertemuan 11 : Review Hasil Web yang di kerjakan",
         {
           text: "Pertemuan 12 : Dokumentasi Project untuk Portofolio dan Evaluasi",
