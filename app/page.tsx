@@ -1,4 +1,3 @@
-import { RegistrationProvider } from "@/components/providers/RegistrationProvider";
 import Benefits from "@/components/sections/Benefits";
 import CTA from "@/components/sections/CTA";
 import Curriculum from "@/components/sections/Curriculum";
@@ -15,20 +14,18 @@ import Timeline from "@/components/sections/Timeline";
 export default function Home() {
   return (
     <div className="bg-background-dark text-white overflow-x-hidden">
-      <RegistrationProvider>
-        <Navbar />
-        <Hero />
-        <Philosophy />
-        <Curriculum />
-        <Speaker />
-        <TechStack />
-        <Timeline />
-        <Benefits />
-        <Participants />
-        <CTA />
-        <FloatingCTA />
-        <Footer />
-      </RegistrationProvider>
+      <Navbar />
+      <Hero />
+      <Philosophy />
+      <Curriculum />
+      <Speaker />
+      <TechStack />
+      <Timeline />
+      <Benefits />
+      <Participants />
+      <CTA />
+      <FloatingCTA />
+      <Footer />
     </div>
   );
 }

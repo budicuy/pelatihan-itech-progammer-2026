@@ -18,6 +18,8 @@ export const metadata: Metadata = {
     "Pelatihan Divisi Programmer Komunitas Itech Poliban 2026 - Kuasai Vibe Coding dan AI Assistant.",
 };
 
+import { RegistrationProvider } from "@/components/providers/RegistrationProvider";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -29,7 +31,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}
       >
-        {children}
+        <RegistrationProvider>{children}</RegistrationProvider>
       </body>
     </html>
   );
