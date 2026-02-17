@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { HiOutlineDatabase } from "react-icons/hi";
 import {
+  SiGithub,
   SiGooglecloud,
   SiNextdotjs,
   SiNodedotjs,
@@ -26,6 +27,7 @@ export default function TechStack() {
       className: "text-green-600",
     },
     { name: "Vercel", icon: <SiVercel className="text-2xl" /> },
+    { name: "GitHub", icon: <SiGithub className="text-2xl" /> },
   ];
 
   return (

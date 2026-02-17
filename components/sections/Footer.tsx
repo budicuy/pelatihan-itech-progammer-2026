@@ -10,38 +10,50 @@ export default function Footer() {
           <Image
             src="/logo-itech.svg"
             alt="Itech Poliban Logo"
-            width={28}
-            height={28}
+            width={40}
+            height={40}
             className="object-contain"
           />
-          <span className="text-white font-bold font-display text-lg">
-            Itech Poliban
+          <span className="text-white font-bold font-display">
+            <div className="flex items-center gap-2">
+              <span>ITECH</span>
+              <span className="text-accent">POLIBAN</span>
+            </div>
+            <span className="text-gray-400 text-sm mt-2">
+              Pelatihan Programmer yang berfokus pada pengembangan web dan
+              mobile dengan menggunakan teknologi terbaru.
+            </span>
           </span>
         </div>
+
         <div className="text-gray-500 text-sm text-center md:text-right">
           <p className="mb-2">Hubungi Kami:</p>
           <div className="flex gap-4 justify-center md:justify-end">
             <Link
+              target="_blank"
               className="hover:text-accent transition-colors flex items-center gap-1"
-              href="#"
+              href="https://wa.me/62882022007324"
             >
               <MdCall className="text-sm" /> WhatsApp
             </Link>
             <Link
+              target="_blank"
               className="hover:text-accent transition-colors flex items-center gap-1"
-              href="#"
+              href="mailto:polibanitech@gmail.com"
             >
               <MdMail className="text-sm" /> Email
             </Link>
             <Link
+              target="_blank"
               className="hover:text-accent transition-colors flex items-center gap-1"
-              href="#"
+              href="https://www.instagram.com/itechpoliban"
             >
               <MdPublic className="text-sm" /> Instagram
             </Link>
           </div>
           <p className="mt-4 opacity-50">
-            © 2026 Komunitas Itech Poliban. All rights reserved.
+            © {new Date().getFullYear()} Komunitas Itech Poliban. All rights
+            reserved.
           </p>
         </div>
       </div>
