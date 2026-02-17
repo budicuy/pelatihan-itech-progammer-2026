@@ -1,8 +1,8 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState } from "react";
-import RegistrationModal from "@/components/sections/RegistrationModal";
 import { getRegistrationStatus } from "@/app/actions/get-status";
+import RegistrationModal from "@/components/sections/RegistrationModal";
 
 interface RegistrationContextType {
   openModal: () => void;

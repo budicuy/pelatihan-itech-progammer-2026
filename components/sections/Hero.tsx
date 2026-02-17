@@ -48,7 +48,9 @@ export default function Hero() {
             } ${isLoadingStatus ? "opacity-0" : "opacity-100"}`}
           >
             <span>
-              {isRegistrationOpen ? "Daftar Sekarang" : "Pendaftaran Ditutup"}
+              {isRegistrationOpen
+                ? "Daftar Sekarang"
+                : "Pendaftaran Belum dibuka"}
             </span>
             {isRegistrationOpen && (
               <MdArrowForward className="group-hover:translate-x-1 transition-transform text-2xl" />

@@ -28,7 +28,7 @@ export default function CTA() {
           >
             {isRegistrationOpen
               ? "Daftar Sekarang Gratis"
-              : "Pendaftaran Ditutup"}
+              : "Pendaftaran Belum dibuka"}
           </button>
         )}
       </div>

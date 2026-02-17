@@ -68,7 +68,9 @@ export default function Navbar() {
                   : "bg-gray-800 text-gray-500 cursor-not-allowed shadow-none"
               }`}
             >
-              {isRegistrationOpen ? "Daftar Sekarang" : "Pendaftaran Ditutup"}
+              {isRegistrationOpen
+                ? "Daftar Sekarang"
+                : "Pendaftaran Belum dibuka"}
             </button>
           )}
 

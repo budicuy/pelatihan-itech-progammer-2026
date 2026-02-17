@@ -13,7 +13,8 @@ export async function registerAction(formData: {
 }) {
   try {
     // 0. Cek apakah pendaftaran sedang dibuka
-    const isRegistrationOpen = process.env.REGISTRATION?.toUpperCase() === "TRUE";
+    const isRegistrationOpen =
+      process.env.REGISTRATION?.toUpperCase() === "TRUE";
     if (!isRegistrationOpen) {
       return {
         success: false,
