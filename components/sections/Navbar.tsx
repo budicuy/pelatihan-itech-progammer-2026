@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { MdMenu, MdClose } from "react-icons/md";
+import { useEffect, useState } from "react";
+import { MdClose, MdMenu } from "react-icons/md";
 import { useRegistration } from "@/components/providers/RegistrationProvider";
-import { useState, useEffect } from "react";
 
 const navLinks = [
   { href: "/#home", label: "Beranda" },
@@ -97,7 +97,9 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu Overlay */}
-      <div
+      <button
+        type="button"
+        aria-label="Tutup menu"
         className={`fixed top-16 inset-x-0 bottom-0 bg-black/60 backdrop-blur-sm z-40 md:hidden transition-opacity duration-300 ${
           isMenuOpen
             ? "opacity-100 pointer-events-auto"
