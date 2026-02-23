@@ -1,3 +1,4 @@
+import SplashWrapper from "@/components/providers/SplashWrapper";
 import Benefits from "@/components/sections/Benefits";
 import CTA from "@/components/sections/CTA";
 import Curriculum from "@/components/sections/Curriculum";
@@ -13,19 +14,21 @@ import Timeline from "@/components/sections/Timeline";
 
 export default function Home() {
   return (
-    <div className="bg-background-dark text-white overflow-x-hidden">
-      <Navbar />
-      <Hero />
-      <Philosophy />
-      <Participants />
-      <Curriculum />
-      <TechStack />
-      <Timeline />
-      <Benefits />
-      <Speaker />
-      <CTA />
-      <FloatingCTA />
-      <Footer />
-    </div>
+    <SplashWrapper>
+      <div className="bg-background-dark text-white overflow-x-hidden">
+        <Navbar />
+        <Hero />
+        <Philosophy />
+        <Participants />
+        <Curriculum />
+        <TechStack />
+        <Timeline />
+        <Benefits />
+        <Speaker />
+        <CTA />
+        <FloatingCTA />
+        <Footer />
+      </div>
+    </SplashWrapper>
   );
 }
