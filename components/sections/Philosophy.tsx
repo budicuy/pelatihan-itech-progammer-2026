@@ -36,13 +36,13 @@ export default function Philosophy() {
 
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 space-y-8">
-            <div className="glass-card p-8 rounded-2xl border-l-4 border-l-primary hover:translate-x-2 transition-transform duration-300">
-              <div className="flex gap-5">
-                <div className="shrink-0 size-14 rounded-xl bg-primary/20 flex items-center justify-center text-primary border border-primary/30 shadow-lg shadow-primary/10">
-                  <MdPerson className="text-3xl" />
+            <div className="glass-card p-5 sm:p-8 rounded-2xl border-l-4 border-l-primary hover:translate-x-2 transition-transform duration-300">
+              <div className="flex items-start gap-4">
+                <div className="shrink-0 size-11 rounded-xl bg-primary/20 flex items-center justify-center text-primary border border-primary/30 shadow-lg shadow-primary/10 mt-0.5">
+                  <MdPerson className="text-2xl" />
                 </div>
                 <div>
-                  <h4 className="text-2xl font-bold text-white mb-2 font-display">
+                  <h4 className="text-xl sm:text-2xl font-bold text-white mb-1.5 font-display leading-tight">
                     The Visionary Pilot
                   </h4>
                   <p className="text-gray-400 leading-relaxed">
@@ -58,13 +58,13 @@ export default function Philosophy() {
               </div>
             </div>
 
-            <div className="glass-card p-8 rounded-2xl border-l-4 border-l-accent hover:translate-x-2 transition-transform duration-300">
-              <div className="flex gap-5">
-                <div className="shrink-0 size-14 rounded-xl bg-accent/20 flex items-center justify-center text-accent border border-accent/30 shadow-lg shadow-accent/10">
-                  <MdSmartToy className="text-3xl" />
+            <div className="glass-card p-5 sm:p-8 rounded-2xl border-l-4 border-l-accent hover:translate-x-2 transition-transform duration-300">
+              <div className="flex items-start gap-4">
+                <div className="shrink-0 size-11 rounded-xl bg-accent/20 flex items-center justify-center text-accent border border-accent/30 shadow-lg shadow-accent/10 mt-0.5">
+                  <MdSmartToy className="text-2xl" />
                 </div>
                 <div>
-                  <h4 className="text-2xl font-bold text-white mb-2 font-display">
+                  <h4 className="text-xl sm:text-2xl font-bold text-white mb-1.5 font-display leading-tight">
                     The Neural Co-Pilot
                   </h4>
                   <p className="text-gray-400 leading-relaxed">
@@ -77,13 +77,13 @@ export default function Philosophy() {
               </div>
             </div>
 
-            <div className="glass-card p-8 rounded-2xl border-l-4 border-l-purple-500 hover:translate-x-2 transition-transform duration-300">
-              <div className="flex gap-5">
-                <div className="shrink-0 size-14 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-400 border border-purple-500/30 shadow-lg shadow-purple-500/10">
-                  <MdLayers className="text-3xl" />
+            <div className="glass-card p-5 sm:p-8 rounded-2xl border-l-4 border-l-purple-500 hover:translate-x-2 transition-transform duration-300">
+              <div className="flex items-start gap-4">
+                <div className="shrink-0 size-11 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-400 border border-purple-500/30 shadow-lg shadow-purple-500/10 mt-0.5">
+                  <MdLayers className="text-2xl" />
                 </div>
                 <div>
-                  <h4 className="text-2xl font-bold text-white mb-2 font-display">
+                  <h4 className="text-xl sm:text-2xl font-bold text-white mb-1.5 font-display leading-tight">
                     The Flow Ecosystem
                   </h4>
                   <p className="text-gray-400 leading-relaxed">
