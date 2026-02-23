@@ -49,7 +49,7 @@ export default function Curriculum() {
       icon: <MdRocketLaunch className="text-2xl" />,
       title: "Deployment",
       description:
-        "Publish aplikasi Anda ke internet menggunakan Vercel dan layanan cloud modern.",
+        "Publish aplikasi kamu ke internet menggunakan Vercel secara mudah.",
       colorClass: "bg-purple-500/10 text-purple-400",
     },
   ];

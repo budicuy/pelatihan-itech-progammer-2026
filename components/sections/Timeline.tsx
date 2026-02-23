@@ -8,7 +8,10 @@ export default function Timeline() {
       description:
         "Membangun fondasi teknis dan integrasi AI dalam workflow development.",
       meetings: [
-        "Pertemuan 1 : Technical Meeting",
+        {
+          text: "Pertemuan 1 : Technical Meeting",
+          highlight: true,
+        },
         "Pertemuan 2 : Installasi setup dan Struktur Dasar Project",
         "Pertemuan 3 : Belajar Tools dan Promting AI",
         "Pertemuan 4 : Belajar Desain dan Prototiping dengan AI",
@@ -40,7 +43,7 @@ export default function Timeline() {
         "Pertemuan 10 : Tes Implementasikan Studi Kasus 2 Web E-Commerce Atau Studi Kasus Poliklinik",
         "Pertemuan 11 : Review Hasil Web yang di kerjakan",
         {
-          text: "Pertemuan 12 : Dokumentasi Project untuk Portofolio dan Evaluasi",
+          text: "Pertemuan 12 : Dokumentasi Project untuk Portofolio",
           highlight: true,
         },
       ],

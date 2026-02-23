@@ -25,12 +25,12 @@ export default function Philosophy() {
             Filosofi Vibe Coding
           </h3>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Pelatihan ini tidak hanya mengajarkan cara menulis kode, tapi
-            bagaimana cara{" "}
+            Pelatihan ini bukan cuma soal ngetik kode, tapi tentang gimana cara{" "}
             <span className="text-white font-semibold">
-              menciptakan masa depan
+              kamu mewujudkan ide secepat kilat.
             </span>{" "}
-            dengan harmoni antara intuisi manusia dan presisi mesin.
+            Kita gabungin insting kreatif kamu dengan kecepatan AI buat bikin
+            aplikasi yang luar biasa.
           </p>
         </div>
 
@@ -46,12 +46,13 @@ export default function Philosophy() {
                     The Visionary Pilot
                   </h4>
                   <p className="text-gray-400 leading-relaxed">
-                    Anda adalah otak di balik layar. Fokus pada{" "}
+                    Kamu adalah otak utamanya.{" "}
                     <span className="text-accent">
-                      arsitektur, logika bisnis, dan pengalaman pengguna
-                    </span>
-                    . Biarkan insting kreatif Anda memandu arah proyek tanpa
-                    terhambat oleh hambatan teknis yang repetitif.
+                      Tugas kamu cuma fokus ke rancangan besar, aturan bisnis,
+                      dan gimana supaya user nyaman pakai aplikasimu.
+                    </span>{" "}
+                    Biar ide kreatifmu yang jadi arahnya, tanpa perlu pusing
+                    sama urusan kodingan yang itu-itu aja.
                   </p>
                 </div>
               </div>
@@ -67,13 +68,10 @@ export default function Philosophy() {
                     The Neural Co-Pilot
                   </h4>
                   <p className="text-gray-400 leading-relaxed">
-                    AI bertugas sebagai asisten super cerdas yang{" "}
-                    <span className="text-primary-light">
-                      mengeliminasi boilerplate, melakukan debugging instan, dan
-                      mereferensikan dokumentasi
-                    </span>{" "}
-                    secara real-time. Kecepatan eksekusi Anda akan meningkat
-                    hingga 10x lipat.
+                    Anggap AI sebagai asisten super pintar di sebelahmu. Dia
+                    yang beresin kode template, benerin error seketika, dan cari
+                    dokumentasi buat kamu. Hasilnya? Kamu bisa kerja 10x lebih
+                    cepat dari biasanya.
                   </p>
                 </div>
               </div>
@@ -89,11 +87,14 @@ export default function Philosophy() {
                     The Flow Ecosystem
                   </h4>
                   <p className="text-gray-400 leading-relaxed">
-                    Transformasi dari sekadar koding menjadi{" "}
-                    <span className="text-purple-300">orchestration</span>. Kami
-                    membangun ekosistem dimana tools, AI, dan kreativitas Anda
-                    menyatu tanpa hambatan, menciptakan lingkungan kerja yang
-                    suportif bagi inovasi tanpa batas.
+                    Coding sekarang bukan lagi soal ngetik manual satu per satu,
+                    tapi lebih ke{" "}
+                    <span className="text-purple-300">
+                      ngatur semua tools biar jalan bareng
+                    </span>{" "}
+                    Kita bikin suasana kerja di mana ide kamu dan AI nyambung
+                    tanpa macet. Semuanya jadi otomatis, gampang, dan kamu nggak
+                    perlu lagi mikirin hal-hal teknis yang ngebosenin.
                   </p>
                 </div>
               </div>
@@ -136,69 +137,116 @@ export default function Philosophy() {
                     <span className="text-gray-600 select-none">01</span>
                     <span>
                       <span className="text-purple-400">import</span>{" "}
-                      <span className="text-white">AI</span>{" "}
+                      <span className="text-white">{"{ "}</span>
+                      <span className="text-blue-400">Pilot</span>
+                      <span className="text-white">{", "}</span>
+                      <span className="text-blue-400">CoPilot</span>
+                      <span className="text-white">{" } "}</span>
                       <span className="text-purple-400">from</span>{" "}
-                      <span className="text-green-400">"antigravity"</span>
+                      <span className="text-green-400">{'"vibe-coding"'}</span>
                       <span className="text-white">;</span>
                     </span>
                   </div>
-                  <div className="flex gap-3 border-l-2 border-primary/30 pl-3 -ml-3 bg-primary/5">
+                  <div className="flex gap-3 h-6" />
+                  <div className="flex gap-3 border-l-2 border-accent/30 pl-3 -ml-3 bg-accent/5">
                     <span className="text-gray-600 select-none">02</span>
                     <span className="text-gray-500 italic">
-                      {'// @prompt: "Buat arsitektur synergy"'}
+                      {"// 🧠 Kamu cukup kasih ide, AI yang eksekusi"}
                     </span>
                   </div>
                   <div className="flex gap-3">
                     <span className="text-gray-600 select-none">03</span>
                     <span>
                       <span className="text-purple-400">const</span>{" "}
-                      <span className="text-blue-400">Success</span>{" "}
+                      <span className="text-blue-400">ide</span>{" "}
                       <span className="text-white">=</span>{" "}
-                      <span className="text-white">()</span>{" "}
-                      <span className="text-purple-400">=&gt;</span>{" "}
-                      <span className="text-white">{"{"}</span>
-                    </span>
-                  </div>
-                  <div className="flex gap-3 pl-4">
-                    <span className="text-gray-600 select-none">04</span>
-                    <span>
-                      <span className="text-purple-400">return</span>{" "}
+                      <span className="text-accent">Pilot</span>
+                      <span className="text-white">.</span>
+                      <span className="text-yellow-300">describe</span>
                       <span className="text-white">(</span>
+                      <span className="text-green-400">
+                        {'"Bikin web toko online"'}
+                      </span>
+                      <span className="text-white">);</span>
                     </span>
-                  </div>
-                  <div className="flex gap-3 pl-8">
-                    <span className="text-gray-600 select-none">05</span>
-                    <span>
-                      <span className="text-white">&lt;</span>
-                      <span className="text-blue-400">PilotMode</span>
-                    </span>
-                  </div>
-                  <div className="flex gap-3 pl-12 text-accent">
-                    <span className="text-gray-600 select-none">06</span>
-                    <span>control="human"</span>
-                  </div>
-                  <div className="flex gap-3 pl-12 text-accent">
-                    <span className="text-gray-600 select-none">07</span>
-                    <span>speed="10x"</span>
-                  </div>
-                  <div className="flex gap-3 pl-8 text-white">
-                    <span className="text-gray-600 select-none">08</span>
-                    <span>/&gt;</span>
-                  </div>
-                  <div className="flex gap-3 pl-4">
-                    <span className="text-gray-600 select-none">09</span>
-                    <span className="text-white">);</span>
                   </div>
                   <div className="flex gap-3">
-                    <span className="text-gray-600 select-none">10</span>
-                    <span className="text-white">{"}"};</span>
+                    <span className="text-gray-600 select-none">04</span>
+                    <span>
+                      <span className="text-purple-400">const</span>{" "}
+                      <span className="text-blue-400">desain</span>{" "}
+                      <span className="text-white">=</span>{" "}
+                      <span className="text-purple-400">await</span>{" "}
+                      <span className="text-accent">CoPilot</span>
+                      <span className="text-white">.</span>
+                      <span className="text-yellow-300">design</span>
+                      <span className="text-white">(</span>
+                      <span className="text-blue-400">ide</span>
+                      <span className="text-white">);</span>
+                    </span>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-gray-600 select-none">05</span>
+                    <span>
+                      <span className="text-purple-400">const</span>{" "}
+                      <span className="text-blue-400">kode</span>{" "}
+                      <span className="text-white">=</span>{" "}
+                      <span className="text-purple-400">await</span>{" "}
+                      <span className="text-accent">CoPilot</span>
+                      <span className="text-white">.</span>
+                      <span className="text-yellow-300">generate</span>
+                      <span className="text-white">(</span>
+                      <span className="text-blue-400">desain</span>
+                      <span className="text-white">);</span>
+                    </span>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-gray-600 select-none">06</span>
+                    <span>
+                      <span className="text-purple-400">const</span>{" "}
+                      <span className="text-blue-400">app</span>{" "}
+                      <span className="text-white">=</span>{" "}
+                      <span className="text-purple-400">await</span>{" "}
+                      <span className="text-accent">CoPilot</span>
+                      <span className="text-white">.</span>
+                      <span className="text-yellow-300">deploy</span>
+                      <span className="text-white">(</span>
+                      <span className="text-blue-400">kode</span>
+                      <span className="text-white">);</span>
+                    </span>
+                  </div>
+                  <div className="flex gap-3 h-6" />
+                  <div className="flex gap-3 border-l-2 border-green-500/30 pl-3 -ml-3 bg-green-500/5">
+                    <span className="text-gray-600 select-none">07</span>
+                    <span className="text-gray-500 italic">
+                      {"// ✅ Done! Dari ide ke live app, secepat itu ⚡"}
+                    </span>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-gray-600 select-none">08</span>
+                    <span>
+                      <span className="text-purple-400">console</span>
+                      <span className="text-white">.</span>
+                      <span className="text-yellow-300">log</span>
+                      <span className="text-white">(</span>
+                      <span className="text-blue-400">app</span>
+                      <span className="text-white">.</span>
+                      <span className="text-blue-400">url</span>
+                      <span className="text-white">);</span>
+                    </span>
+                  </div>
+                  <div className="flex gap-3 border-l-2 border-primary/30 pl-3 -ml-3 bg-primary/5">
+                    <span className="text-gray-600 select-none">→</span>
+                    <span className="text-green-400 font-semibold">
+                      {'🚀 "https://toko-kamu.vercel.app"'}
+                    </span>
                   </div>
 
-                  <div className="mt-8 pt-4 border-t border-white/5">
-                    <div className="flex items-center gap-2 text-primary font-bold animate-pulse">
-                      <span className="size-2 rounded-full bg-primary" />
+                  <div className="mt-6 pt-4 border-t border-white/5">
+                    <div className="flex items-center gap-2 text-green-400 font-bold">
+                      <span className="size-2 rounded-full bg-green-400 animate-pulse" />
                       <span className="text-[10px] tracking-tighter uppercase">
-                        Neural Engine Generating...
+                        App Live — 10x Lebih Cepat 🔥
                       </span>
                     </div>
                   </div>
@@ -207,7 +255,7 @@ export default function Philosophy() {
             </div>
 
             {/* Floating Badge */}
-            <div className="absolute -bottom-6 -left-6 glass-card p-4 rounded-xl border border-white/10 shadow-2xl animate-float z-20">
+            <div className="absolute -bottom-6 right-2 lg:-right-6 glass-card p-4 rounded-xl border border-white/10 shadow-2xl animate-float z-20">
               <div className="flex items-center gap-3">
                 <div className="size-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-400">
                   <MdRocketLaunch className="text-xl" />

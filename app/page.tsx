@@ -17,12 +17,12 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Philosophy />
+      <Participants />
       <Curriculum />
-      <Speaker />
       <TechStack />
       <Timeline />
       <Benefits />
-      <Participants />
+      <Speaker />
       <CTA />
       <FloatingCTA />
       <Footer />
