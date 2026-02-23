@@ -1,16 +1,9 @@
 import Image from "next/image";
 import { HiOutlineDatabase } from "react-icons/hi";
-import {
-  SiGithub,
-  SiGooglecloud,
-  SiNextdotjs,
-  SiNodedotjs,
-  SiVercel,
-} from "react-icons/si";
+import { SiGithub, SiNextdotjs, SiNodedotjs, SiVercel } from "react-icons/si";
 
 export default function TechStack() {
   const techs = [
-    { name: "Google IDX", icon: <SiGooglecloud className="text-2xl" /> },
     {
       name: "Antigravity",
       logo: "/antigravittlogo.png",
