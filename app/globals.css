@@ -71,6 +71,9 @@ h6,
 
 .hero-animate {
   opacity: 0;
+}
+
+.content-ready .hero-animate {
   animation: heroFadeUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   animation-delay: var(--delay, 0s);
 }

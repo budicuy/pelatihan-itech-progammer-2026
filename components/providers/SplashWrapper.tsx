@@ -18,7 +18,7 @@ export default function SplashWrapper({
     <>
       {showSplash && <SplashScreen onFinish={handleFinish} />}
       <div
-        className={`transition-opacity duration-500 ${showSplash ? "opacity-0" : "opacity-100"}`}
+        className={`transition-opacity duration-500 ${showSplash ? "opacity-0" : "opacity-100 content-ready"}`}
       >
         {children}
       </div>
