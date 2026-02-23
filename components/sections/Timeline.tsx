@@ -23,7 +23,7 @@ export default function Timeline() {
         "Implementasi desain, deployment, dan integrasi database dinamis.",
       meetings: [
         "Pertemuan 5 : Slicing Desain ke Project",
-        "Pertemuan 6 : Deploy App Ke Gitbub dan Hosting ke Vercel",
+        "Pertemuan 6 : Deploy App Ke Github dan Hosting ke Vercel",
         "Pertemuan 7 : Integrasikan Ke database dan Data dinamis",
         "Pertemuan 8 : Pengujian Peforma dan Testing Otomatis",
       ],
