@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import {
   MdAutoFixHigh,
   MdLayers,
@@ -8,6 +11,26 @@ import {
 } from "react-icons/md";
 
 export default function Philosophy() {
+  const terminalRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.3 },
+    );
+
+    if (terminalRef.current) {
+      observer.observe(terminalRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
   return (
     <section
       className="py-24 bg-[#0f0c13] relative overflow-hidden"
@@ -117,7 +140,12 @@ export default function Philosophy() {
           </div>
 
           <div className="lg:col-span-5 relative">
-            <div className="rounded-3xl bg-linear-to-br from-primary via-purple-900 to-black p-1 shadow-2xl shadow-primary/20 overflow-hidden">
+            <div
+              ref={terminalRef}
+              className={`rounded-3xl bg-linear-to-br from-primary via-purple-900 to-black p-1 shadow-2xl shadow-primary/20 overflow-hidden ${
+                isVisible ? "animate-glow-pulse terminal-visible" : ""
+              }`}
+            >
               <div className="h-full w-full bg-card-dark rounded-[calc(1.5rem-1px)] overflow-hidden flex flex-col font-mono text-xs sm:text-sm border border-white/5">
                 {/* Terminal Header */}
                 <div className="bg-[#2a2433] px-4 py-3 flex items-center justify-between border-b border-white/5">
@@ -133,7 +161,10 @@ export default function Philosophy() {
                 </div>
                 {/* Terminal Body */}
                 <div className="p-6 space-y-3 min-h-[350px]">
-                  <div className="flex gap-3">
+                  <div
+                    className="terminal-line flex gap-3"
+                    style={{ animationDelay: "0.2s" }}
+                  >
                     <span className="text-gray-600 select-none">01</span>
                     <span>
                       <span className="text-purple-400">import</span>{" "}
@@ -147,14 +178,23 @@ export default function Philosophy() {
                       <span className="text-white">;</span>
                     </span>
                   </div>
-                  <div className="flex gap-3 h-6" />
-                  <div className="flex gap-3 border-l-2 border-accent/30 pl-3 -ml-3 bg-accent/5">
+                  <div
+                    className="terminal-line flex gap-3 h-6"
+                    style={{ animationDelay: "0.5s" }}
+                  />
+                  <div
+                    className="terminal-line flex gap-3 border-l-2 border-accent/30 pl-3 -ml-3 bg-accent/5"
+                    style={{ animationDelay: "0.7s" }}
+                  >
                     <span className="text-gray-600 select-none">02</span>
                     <span className="text-gray-500 italic">
                       {"// 🧠 Kamu cukup kasih ide, AI yang eksekusi"}
                     </span>
                   </div>
-                  <div className="flex gap-3">
+                  <div
+                    className="terminal-line flex gap-3"
+                    style={{ animationDelay: "1.1s" }}
+                  >
                     <span className="text-gray-600 select-none">03</span>
                     <span>
                       <span className="text-purple-400">const</span>{" "}
@@ -170,7 +210,10 @@ export default function Philosophy() {
                       <span className="text-white">);</span>
                     </span>
                   </div>
-                  <div className="flex gap-3">
+                  <div
+                    className="terminal-line flex gap-3"
+                    style={{ animationDelay: "1.6s" }}
+                  >
                     <span className="text-gray-600 select-none">04</span>
                     <span>
                       <span className="text-purple-400">const</span>{" "}
@@ -185,7 +228,10 @@ export default function Philosophy() {
                       <span className="text-white">);</span>
                     </span>
                   </div>
-                  <div className="flex gap-3">
+                  <div
+                    className="terminal-line flex gap-3"
+                    style={{ animationDelay: "2.1s" }}
+                  >
                     <span className="text-gray-600 select-none">05</span>
                     <span>
                       <span className="text-purple-400">const</span>{" "}
@@ -200,7 +246,10 @@ export default function Philosophy() {
                       <span className="text-white">);</span>
                     </span>
                   </div>
-                  <div className="flex gap-3">
+                  <div
+                    className="terminal-line flex gap-3"
+                    style={{ animationDelay: "2.6s" }}
+                  >
                     <span className="text-gray-600 select-none">06</span>
                     <span>
                       <span className="text-purple-400">const</span>{" "}
@@ -215,14 +264,23 @@ export default function Philosophy() {
                       <span className="text-white">);</span>
                     </span>
                   </div>
-                  <div className="flex gap-3 h-6" />
-                  <div className="flex gap-3 border-l-2 border-green-500/30 pl-3 -ml-3 bg-green-500/5">
+                  <div
+                    className="terminal-line flex gap-3 h-6"
+                    style={{ animationDelay: "3.2s" }}
+                  />
+                  <div
+                    className="terminal-line flex gap-3 border-l-2 border-green-500/30 pl-3 -ml-3 bg-green-500/5"
+                    style={{ animationDelay: "3.5s" }}
+                  >
                     <span className="text-gray-600 select-none">07</span>
                     <span className="text-gray-500 italic">
                       {"// ✅ Done! Dari ide ke live app, secepat itu ⚡"}
                     </span>
                   </div>
-                  <div className="flex gap-3">
+                  <div
+                    className="terminal-line flex gap-3"
+                    style={{ animationDelay: "4s" }}
+                  >
                     <span className="text-gray-600 select-none">08</span>
                     <span>
                       <span className="text-purple-400">console</span>
@@ -235,14 +293,20 @@ export default function Philosophy() {
                       <span className="text-white">);</span>
                     </span>
                   </div>
-                  <div className="flex gap-3 border-l-2 border-primary/30 pl-3 -ml-3 bg-primary/5">
+                  <div
+                    className="terminal-line flex gap-3 border-l-2 border-primary/30 pl-3 -ml-3 bg-primary/5"
+                    style={{ animationDelay: "4.5s" }}
+                  >
                     <span className="text-gray-600 select-none">→</span>
-                    <span className="text-green-400 font-semibold">
+                    <span className="text-green-400 font-semibold terminal-cursor">
                       {'🚀 "https://toko-kamu.vercel.app"'}
                     </span>
                   </div>
 
-                  <div className="mt-6 pt-4 border-t border-white/5">
+                  <div
+                    className="terminal-line mt-6 pt-4 border-t border-white/5"
+                    style={{ animationDelay: "5s" }}
+                  >
                     <div className="flex items-center gap-2 text-green-400 font-bold">
                       <span className="size-2 rounded-full bg-green-400 animate-pulse" />
                       <span className="text-[10px] tracking-tighter uppercase">

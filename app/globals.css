@@ -54,3 +54,70 @@ h6,
 @utility glow-accent {
   box-shadow: 0 0 20px rgba(250, 204, 21, 0.15);
 }
+
+/* Terminal typing animation */
+@keyframes fadeInLine {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes cursorBlink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(127, 25, 230, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(127, 25, 230, 0.4);
+  }
+}
+
+.terminal-line {
+  opacity: 0;
+}
+
+.terminal-visible .terminal-line {
+  animation: fadeInLine 0.5s ease-out forwards;
+}
+
+.terminal-cursor::after {
+  content: "▋";
+  color: #facc15;
+  animation: cursorBlink 1s step-end infinite;
+  margin-left: 2px;
+}
+
+@utility animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@utility animate-glow-pulse {
+  animation: glowPulse 3s ease-in-out infinite;
+}
