@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import {
   MdBolt,
   MdBugReport,
@@ -8,6 +11,27 @@ import {
 } from "react-icons/md";
 
 export default function Curriculum() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.15 },
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   const curriculumItems = [
     {
       icon: <MdConstruction className="text-2xl" />,
@@ -55,9 +79,13 @@ export default function Curriculum() {
   ];
 
   return (
-    <section className="py-20 relative" id="curriculum">
+    <section className="py-20 relative" id="curriculum" ref={sectionRef}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div
+          className={`text-center max-w-3xl mx-auto mb-16 transition-all duration-700 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           <h2 className="text-3xl md:text-4xl font-bold font-display mb-4 text-gradient">
             Kurikulum Vibe Coding
           </h2>
@@ -67,12 +95,22 @@ export default function Curriculum() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {curriculumItems.map((item) => (
+          {curriculumItems.map((item, index) => (
             <div
               key={item.title}
-              className={`glass-card p-6 rounded-xl hover:border-primary/50 transition-colors group ${
+              className={`glass-card p-6 rounded-xl hover:border-primary/50 transition-all group ${
                 item.extraClass || ""
+              } ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
               }`}
+              style={{
+                transitionDuration: "0.6s",
+                transitionTimingFunction:
+                  "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+                transitionDelay: isVisible ? `${0.15 + index * 0.1}s` : "0s",
+              }}
             >
               <div
                 className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform ${item.colorClass}`}

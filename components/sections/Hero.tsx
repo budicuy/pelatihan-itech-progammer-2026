@@ -17,26 +17,49 @@ export default function Hero() {
         <div className="absolute top-40 right-1/4 w-80 h-80 bg-accent/10 rounded-full blur-[80px]" />
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-border-dark/50 border border-primary/30 mb-6 backdrop-blur-sm">
+        <div
+          className="hero-animate inline-flex items-center gap-2 px-3 py-1 rounded-full bg-border-dark/50 border border-primary/30 mb-6 backdrop-blur-sm"
+          style={{ "--delay": "0s" } as React.CSSProperties}
+        >
           <span className="flex h-2 w-2 rounded-full bg-accent" />
           <span className="text-xs font-medium text-accent uppercase tracking-wider">
             Batch 1 : Vibe Coding AI - 2026
           </span>
         </div>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-display tracking-tight leading-tight mb-6">
-          Pelatihan Divisi Programmer <br />
-          <span className="text-gradient">Komunitas Itech Poliban 2026</span>
+          <span
+            className="hero-animate inline-block"
+            style={{ "--delay": "0.15s" } as React.CSSProperties}
+          >
+            Pelatihan Divisi Programmer
+          </span>
           <br />
-          <span className="text-2xl font-bold bg-linear-to-r from-primary to-accent md:text-4xl lg:text-5xl px-5 py-2">
+          <span
+            className="hero-animate text-gradient inline-block"
+            style={{ "--delay": "0.3s" } as React.CSSProperties}
+          >
+            Komunitas Itech Poliban 2026
+          </span>
+          <br />
+          <span
+            className="hero-animate text-2xl font-bold bg-linear-to-r from-primary to-accent md:text-4xl lg:text-5xl px-5 py-2 inline-block"
+            style={{ "--delay": "0.45s" } as React.CSSProperties}
+          >
             (Coming Soon!)
           </span>
         </h1>
-        <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+        <p
+          className="hero-animate text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
+          style={{ "--delay": "0.6s" } as React.CSSProperties}
+        >
           Bagaimana Menyesuaikan Diri di Era AI Menggunakan Vibe Coding. Kuasai
           teknik coding modern dimana Anda menjadi pilot dan AI adalah asisten
           cerdas Anda.
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div
+          className="hero-animate flex flex-col sm:flex-row items-center justify-center gap-4"
+          style={{ "--delay": "0.8s" } as React.CSSProperties}
+        >
           <button
             type="button"
             onClick={openModal}
@@ -65,7 +88,10 @@ export default function Hero() {
           </a>
         </div>
         {/* Stats/Tags */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-border-dark pt-8 max-w-4xl mx-auto">
+        <div
+          className="hero-animate mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-border-dark pt-8 max-w-4xl mx-auto"
+          style={{ "--delay": "1s" } as React.CSSProperties}
+        >
           <div className="flex flex-col items-center">
             <span className="text-2xl font-bold text-white font-display">
               12x

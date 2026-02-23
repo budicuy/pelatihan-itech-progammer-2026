@@ -55,6 +55,26 @@ h6,
   box-shadow: 0 0 20px rgba(250, 204, 21, 0.15);
 }
 
+/* Hero animations */
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.hero-animate {
+  opacity: 0;
+  animation: heroFadeUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: var(--delay, 0s);
+}
+
 /* Terminal typing animation */
 @keyframes fadeInLine {
   0% {
